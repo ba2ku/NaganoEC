@@ -1,0 +1,2 @@
+class ItemArtist < ApplicationRecord
+end
