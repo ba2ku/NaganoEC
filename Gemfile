@@ -66,3 +66,4 @@ gem "refile-mini_magick"
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'number_to_yen'
+gem 'seed-fu'
