@@ -36,5 +36,6 @@ Rails.application.routes.draw do
   get 'users/resign'
   get 'users/resign_cmp'
   devise_for :users
+  root to: 'users#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
