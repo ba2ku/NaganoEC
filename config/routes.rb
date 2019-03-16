@@ -1,40 +1,16 @@
 Rails.application.routes.draw do
-  get 'ad_shopping_hists/index'
-  get 'ad_shopping_hists/show'
-  get 'ad_shopping_hists/update'
-  get 'infos/index'
-  get 'infos/create'
-  get 'infos/update'
-  get 'infos/destroy'
-  get 'ad_items/index'
-  get 'ad_items/create'
-  get 'ad_items/show'
-  get 'ad_items/update'
-  get 'ad_items/destroy'
-  get 'ad_items/new'
-  get 'ad_items/edit'
-  get 'ad_users/top'
-  get 'ad_users/index'
-  get 'ad_users/edit'
-  get 'ad_users/update'
-  get 'ad_users/destroy'
-  get 'shopping_hists/index'
-  get 'shopping_hists/create'
-  get 'shopping_hists/show'
-  get 'carts/index'
-  get 'carts/create'
-  get 'carts/show'
-  get 'carts/destroy'
-  get 'carts/update'
-  get 'carts/cart_cmp'
-  get 'items/index'
-  get 'items/show'
-  get 'users/top'
-  get 'users/show'
-  get 'users/update'
-  get 'users/edit'
-  get 'users/resign'
-  get 'users/resign_cmp'
+  resources :ad_shopping_gists, only: [:index, :show, :update]
+  resources :infos, only: [:index, :create, :update, :destroy]
+  resources :ad_items
+  resources :ad_users, only: [:index, :edit, :update, :destroy]
+  get 'ad_users/top' => 'ad_users#top'
+  resources :shopping_hists, only: [:index, :create, :show]
+  resources :carts, only: [:index, :create, :show, :destroy, :update]
+  get 'carts/cart_cmp' => 'carts#carts_cmp'
+  resources :items, only: [:index, :show]
+  resources :users, only: [:show, :update, :edit]
+  get 'users/resign' => 'users#resign'
+  get 'users/resign_cmp' => 'users#resign'
   devise_for :users
   root to: 'users#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
