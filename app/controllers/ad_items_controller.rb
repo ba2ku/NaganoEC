@@ -16,6 +16,7 @@ class AdItemsController < ApplicationController
     if 
       @item.save
     else
+      render :new
     end
     
     end
