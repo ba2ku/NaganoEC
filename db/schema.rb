@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_040010) do
+ActiveRecord::Schema.define(version: 2019_03_17_062552) do
 
   create_table "address_histories", force: :cascade do |t|
     t.integer "shopping_history_id", null: false
@@ -60,22 +60,8 @@ ActiveRecord::Schema.define(version: 2019_03_14_040010) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "item_artists", force: :cascade do |t|
-    t.integer "artist_id", null: false
-    t.integer "item_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "item_genres", force: :cascade do |t|
     t.integer "genre_id", null: false
-    t.integer "item_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "item_labels", force: :cascade do |t|
-    t.integer "label_id", null: false
     t.integer "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -115,12 +101,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_040010) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "notices", force: :cascade do |t|
-    t.string "notice"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "ordered_items", force: :cascade do |t|
     t.integer "item_id", null: false
     t.integer "shopping_history_id", null: false
@@ -145,13 +125,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_040010) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_notices", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "notice_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -172,6 +145,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_040010) do
     t.string "katakana_last", default: "", null: false
     t.string "katakana_first", default: "", null: false
     t.boolean "admin_user", default: false, null: false
+    t.string "notice"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
