@@ -66,5 +66,9 @@ gem "refile-mini_magick"
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'number_to_yen'
+<<<<<<< HEAD
 gem 'seed-fu', '~> 2.3'
 gem 'ransack'
+=======
+gem 'seed-fu'
+>>>>>>> ae314d27899854fd5c832abf3f631c3f5e189f1a
