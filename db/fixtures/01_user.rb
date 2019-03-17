@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-user = User.seed do |s|
-=======
 User.seed do |s|
     s.id = 0
     s.email = "hoge@hoge.com"
@@ -16,7 +13,6 @@ User.seed do |s|
 end
 
 User.seed do |s|
->>>>>>> ae314d27899854fd5c832abf3f631c3f5e189f1a
     s.id = 1
     s.email = "admin@test.com"
     s.encrypted_password = "test123"
@@ -26,18 +22,15 @@ User.seed do |s|
     s.kanji_first = "使用者"
     s.katakana_last = "カンリ"
     s.katakana_first = "ユーザー"
-<<<<<<< HEAD
     s.admin_user = true
 end
 
 user = User.seed do |s|
-=======
     s.notice = "お金払ってください"
     s.admin_user = true
 end
 
 User.seed do |s|
->>>>>>> ae314d27899854fd5c832abf3f631c3f5e189f1a
     s.id = 2
     s.email = "user@test.com"
     s.encrypted_password = "test123"
@@ -47,9 +40,6 @@ User.seed do |s|
     s.kanji_first = "使用者"
     s.katakana_last = "イッパン"
     s.katakana_first = "ユーザー"
-<<<<<<< HEAD
-=======
     s.notice = "お金払ってください"
->>>>>>> ae314d27899854fd5c832abf3f631c3f5e189f1a
     s.admin_user = false
 end
