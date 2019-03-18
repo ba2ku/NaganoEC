@@ -27,3 +27,15 @@ item = Item.seed do |s|
     release_day = Time.zone.now
     display_flag = true
 end
+
+item = Item.seed do |s|
+    s.id = 3
+    s.jacket = '../../assets/images/no_image.jpg'
+    s.price = 20000
+    details = 'hogehogeghoe'
+    stock = 70
+    release_day = Time.zone.now
+    display_flag = true
+end
+
+   

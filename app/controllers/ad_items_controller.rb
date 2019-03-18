@@ -18,8 +18,7 @@ class AdItemsController < ApplicationController
     else
       render :new
     end
-    
-    end
+
   end
 
   def show
@@ -33,6 +32,10 @@ class AdItemsController < ApplicationController
 
 
   def edit
+  end
+
+  def index
+    @items = Item.all
   end
 
   private
