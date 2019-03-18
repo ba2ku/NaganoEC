@@ -25,11 +25,6 @@ User.seed do |s|
     s.admin_user = true
 end
 
-user = User.seed do |s|
-    s.notice = "お金払ってください"
-    s.admin_user = true
-end
-
 User.seed do |s|
     s.id = 2
     s.email = "user@test.com"
